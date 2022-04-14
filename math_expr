@@ -1,0 +1,9 @@
+#!/usr/local/bin/bash
+
+read expr
+if [[ $expr -gt 999 ]]
+then
+  printf "Invalid expression"
+  exit 1
+fi
+awk "BEGIN {printf  \"%.3f\n\", $expr}"

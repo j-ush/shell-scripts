@@ -1,0 +1,33 @@
+#!/usr/local/bin/bash
+
+read X 
+read Y
+read Z
+
+if [[ $X -ge 1000 || $Z -ge 1000 || $Y -ge 1000 || $X -le 0 || $Z -le 0 || $Y -le 0 ]]
+then
+    echo "Invalid input"
+    exit 1
+fi
+
+(( xy = $X + $Y ))
+(( xz = $X + $Z ))
+(( yz = $Y + $Z ))
+if [[ $xy -lt $Z || $xz -lt $Y || $yz -lt $X ]]
+then
+    echo "Invalid input"
+    exit 1;
+fi
+
+(( divxy = xy/2 ))
+if [[ $Z -eq $divxy ]]
+then
+  echo -e "EQUILATERAL"
+elif [[ $X -eq $Y || $X -eq $Z  || $Y -eq $Z ]]
+then
+  echo -e "ISOSCELES"
+else
+  echo -e "SCALENE"
+fi
+
+

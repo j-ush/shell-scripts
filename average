@@ -1,0 +1,38 @@
+<< Question
+Given  integers, compute their average, rounded to three decimal places.
+
+Input Format
+The first line contains an integer, .
+Each of the following  lines contains a single integer.
+
+Output Format
+Display the average of the  integers, rounded off to three decimal places.
+
+Input Constraints
+
+ ( refers to elements of the list of integers for which the average is to be computed)
+
+Sample Input
+
+4
+1
+2
+9
+8
+Sample Output
+
+5.000
+Question
+
+#!/usr/bin/bash
+
+echo "Read number of numbers to be average"
+read COUNT
+i=0
+while($i <= $COUNT)
+do
+read n
+((s+=n))
+(($i++))
+done
+echo $s

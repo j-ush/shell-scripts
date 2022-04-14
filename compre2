@@ -1,0 +1,13 @@
+#!/usr/local/bin/bash
+
+read X 
+
+case $X in 
+Y | y )
+  echo YES
+;;
+
+N | n )
+   echo NO
+   ;;
+esac

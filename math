@@ -1,0 +1,13 @@
+#!/usr/local/bin/bash
+
+read X 
+read Y
+
+(( Z = X + Y ))
+echo $Z
+(( Z = X - Y ))
+echo $Z
+(( Z = X * Y ))
+echo $Z
+(( Z = X / Y )) 
+echo $Z
